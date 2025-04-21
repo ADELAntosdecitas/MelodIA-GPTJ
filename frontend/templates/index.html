@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MelodIA Tokio Premium</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>MelodIA Tokio Premium</h1>
+  <input id="prompt" placeholder="Escribe tu mensaje..." />
+  <button onclick="enviar()">Enviar</button>
+  <pre id="respuesta"></pre>
+  <script>
+    async function enviar() {
+      const prompt = document.getElementById("prompt").value;
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt })
+      });
+      const data = await res.json();
+      document.getElementById("respuesta").innerText = data.response;
+    }
+  </script>
+</body>
+</html>
