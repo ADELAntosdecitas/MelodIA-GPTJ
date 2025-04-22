@@ -12,7 +12,8 @@ startCommand:
   - bash
   - -c
   - |
-      pip install --upgrade pip
-      pip install -r requirements.txt
-      chmod +x start.sh
-      ./start.sh
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    chmod +x start.sh
+    ./start.sh
+
