@@ -3,8 +3,8 @@ import torch
 
 print("🧠 Cargando GPT-J 1.3...")
 
-tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
-model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="v1.3", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-1.3B", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-1.3B", trust_remote_code=True)
 
 def gptj_response(prompt):
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
