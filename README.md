@@ -17,3 +17,4 @@ Accede a http://localhost:8989 o al puerto público en RunPod.
 - `scripts/gptj_server.py`: modelo GPT-J loader
 - `frontend/`: HTML + CSS
 - `logs/bitacora.txt`: para guardar respuestas
+# trigger redeploy
