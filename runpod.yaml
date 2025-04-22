@@ -5,6 +5,9 @@ gpu: true
 ports:
   - containerPort: 8989
 
+environment:
+  - HUGGINGFACE_HUB_TOKEN=${HUGGINGFACE_HUB_TOKEN}
+
 startCommand:
   - bash
   - -c
