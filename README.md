@@ -1,18 +1,19 @@
-# MelodIA Tokio Premium - GPT-J 1.3
+# MelodIA GPT-J - RunPod Edition
 
-Este proyecto despliega una app Flask conectada con GPT-J (EleutherAI/gpt-j-6B).
+Este proyecto ejecuta GPT-J 1.3 con Flask como backend y una interfaz básica.
 
-## Cómo correrlo en local
+## ¿Cómo usarlo?
 
 ```bash
 pip install -r requirements.txt
-python3 app.py
+bash start.sh
 ```
 
-## Endpoints
+Accede a http://localhost:8989 o al puerto público en RunPod.
 
-- `/` - Frontend HTML
-- `/api/chat` - POST `{ prompt: "..." }`
+## Estructura
 
-## Listo para RunPod
-Solo conecta este repo en RunPod y ¡Vamos con tokio!
+- `app.py`: servidor principal
+- `scripts/gptj_server.py`: modelo GPT-J loader
+- `frontend/`: HTML + CSS
+- `logs/bitacora.txt`: para guardar respuestas

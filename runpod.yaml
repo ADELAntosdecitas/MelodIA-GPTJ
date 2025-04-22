@@ -1,0 +1,18 @@
+image: python:3.10
+
+gpu: false
+
+volumeMounts: []
+env: []
+
+ports:
+  - containerPort: 8989
+
+startCommand:
+  - bash
+  - -c
+  - |
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    chmod +x start.sh
+    ./start.sh
